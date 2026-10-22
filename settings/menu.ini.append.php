@@ -7,6 +7,9 @@ Part[nlcronjobnavigationpart]=NL Cronjobs
 Tabs[]=nlcronjobs
 
 [Topmenu_nlcronjobs]
+# Icon - the icon the admin4 design draws before the tab's name: a name of design.ini
+#        [AdminDesignSettings] IconList[] (Bootstrap Icons); older admin designs ignore it.
+Icon=clock
 NavigationPartIdentifier=nlcronjobnavigationpart
 Name=Cronjobs
 Tooltip=Cronjobs dashboard
