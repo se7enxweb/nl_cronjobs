@@ -32,7 +32,9 @@ class ProcessManager {
 	public static function instance() {
 		$ini = eZINI::instance('nlcronjobs.ini');
 		
-		$scriptRoot = $_SERVER['DOCUMENT_ROOT'];
+		// The installation root (where runcronjobs.php is), not the web server's document root,
+		// which differs when the site is served from a subfolder or a front controller.
+		$scriptRoot = eZSys::rootDir();
 		$executable = $ini->variable('ProcessSettings','PhpCliPath');
 		$sleep = $ini->variable('ProcessSettings','SleepTime');
 		$maxExecutionTime = $ini->variable('ProcessSettings','MaxExecutionTime');

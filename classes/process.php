@@ -30,7 +30,12 @@ class Process {
 		);
 		
 		//launch scripts
-		$this->resource = proc_open("$executable $root/".$this->script, $descriptorspec, $this->pipes, null, null);
+		// The script file is quoted; what follows it (the arguments) is quoted by the caller.
+		$scriptParts = explode( ' ', $this->script, 2 );
+		$command = $executable . ' ' . escapeshellarg( $root . '/' . $scriptParts[0] )
+		         . ( isset( $scriptParts[1] ) ? ' ' . $scriptParts[1] : '' );
+		// Run from the installation root, where runcronjobs.php expects to be.
+		$this->resource = proc_open( $command, $descriptorspec, $this->pipes, $root, null );
 		$this->startTime = time();
 	}
 	
