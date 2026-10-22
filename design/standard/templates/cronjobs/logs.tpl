@@ -24,7 +24,7 @@
 		
 <div id="contents">
 	<div class="output">{'Output:'|i18n('extension/nlcronjobs')} <br>
-		{$output|nl2br}
+		{$output|wash|nl2br}
 		<a name="end_output"></a>
 		<br/>
 		<br/>
@@ -33,7 +33,7 @@
 	<hr />
 	<div class="errors">{'Errors:'|i18n('extension/nlcronjobs')} <br>
 		<hr />
-		{$errors|nl2br}
+		{$errors|wash|nl2br}
 		<a name="end_error"></a>
 	</div>
 	
