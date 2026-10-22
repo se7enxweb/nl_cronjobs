@@ -13,7 +13,7 @@ class nl_cronjobsInfo
     {
         return array(
             'Name'      => '<a href="https://github.com/se7enxweb/nl_cronjobs">NL Cronjobs</a>',
-            'Version'   => '1.4',
+            'Version'   => '1.5.0',
             'Author'    => 'Nicolas Lescure and 7x',
             'Copyright' => 'Copyright &copy; 2011 - 2014 Nicolas Lescure and 1998 - ' . date( 'Y' ) . ' 7x',
             'License'   => 'GNU General Public License v2.0',

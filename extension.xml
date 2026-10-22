@@ -2,7 +2,7 @@
 <software>
     <metadata>
         <name>NL Cronjobs</name>
-        <version>1.4</version>
+        <version>1.5.0</version>
         <copyright>Copyright (C) 2011 - 2014 Nicolas Lescure and 1998 - 2026 7x</copyright>
         <license>GNU General Public License v2.0</license>
         <info_url>https://github.com/se7enxweb/nl_cronjobs</info_url>
