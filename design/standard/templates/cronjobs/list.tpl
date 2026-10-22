@@ -14,7 +14,9 @@
 		jQuery.ajax({
 		  url: "{/literal}{'/cronjobs/launch'|ezurl('no')}{literal}",
 		  type: "POST",
-		  data: "part="+part,
+		  // The form token of ezformtoken, which protects every POST of the administration.
+		  headers: { "X-CSRF-Token": jQuery( "meta[name=\"csrf-token\"]" ).attr( "content" ) || "" },
+		  data: "part=" + encodeURIComponent( part ),
 		  timeout: 3600 * 1000,
 		  context: document.body,
 		  404: function() {
