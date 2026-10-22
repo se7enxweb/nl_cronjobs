@@ -12,11 +12,11 @@ $http = eZHTTPTool::instance();
 $manager = ProcessManager::instance();
 $outputs = array();
 
-if( $http->hasVariable('log_output') ) {
+if( $http->hasPostVariable('log_output') ) {
 	$manager->cleanOutputFile();
 	$outputs[] = ezpI18n::tr( 'extension/nlcronjobs', 'Output file cleared.' );
 }
-if( $http->hasVariable('log_error') ) {
+if( $http->hasPostVariable('log_error') ) {
 	$manager->cleanErrorFile();
 	$outputs[] = ezpI18n::tr( 'extension/nlcronjobs', 'Error file cleared.' );
 }
